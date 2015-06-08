@@ -18,5 +18,7 @@ cbind(dateTime = format(as.POSIXct(paste(dataNeeded$Date,dataNeeded$Time)),"%d/%
 plot(dataNeeded$Time, dataNeeded$Sub_metering_1, type = "l", col = "black", pch = 27,ylab = "Energy sub metering")
 lines(dataNeeded$Time, dataNeeded$Sub_metering_2, col = "red")
 lines(dataNeeded$Time, dataNeeded$Sub_metering_3, col = "blue")
+leg.txt <- c("Sub_metering_1", "Sub_metering_2", "Sub_Metering_3")
+legend('topright', leg.txt, lty = 1, col = c('black', 'red','blue'))
 dev.copy(png, 'plot3.png', width = 480, height = 480)
 dev.off()

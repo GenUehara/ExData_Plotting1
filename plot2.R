@@ -15,6 +15,6 @@ cbind(dateTime = format(as.POSIXct(paste(dataNeeded$Date,dataNeeded$Time)),"%d/%
 
 
 # now plot!
-plot(dataNeeded$Time, dataNeeded$Global_active_power, type = "o", pch = 27,ylab = "Global Avtive Power (kilowatts)")
+plot(dataNeeded$Time, dataNeeded$Global_active_power, type = "l", pch = 27,ylab = "Global Avtive Power (kilowatts)")
 dev.copy(png, 'plot2.png', width = 480, height = 480)
 dev.off()
